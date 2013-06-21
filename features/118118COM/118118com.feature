@@ -2,7 +2,7 @@ Feature: 118 118 Demo
   Make sure I can go to 118118.com and search for stuff
   
   Background: 
-    Given I visit "http://118118.com"
+    Given I visit the default site
   
   Scenario: Search for a Mechanic
     When I enter "mechanic" into the "What?" field
@@ -15,7 +15,7 @@ Feature: 118 118 Demo
     When I enter "Liverpool" into the "Where?" field
     Then I click the "search" button
     Then I should see the "Pizza Hut" text
-
+  
   Scenario: Test Location Field Auto Complete
     When I enter "leic" into the "Where?" field
     Then I should see the following text: 
